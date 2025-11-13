@@ -1,5 +1,18 @@
 from fastapi import FastAPI
 from app.api import auth
+from app.api.endpoints import devices # NEW IMPORT
+
+# Initialize FastAPI application
+app = FastAPI(
+    title="SNAMS API",
+    # ...
+)
+
+# --- Include Routers ---
+app.include_router(auth.router, prefix="/api/v1")
+app.include_router(devices.router, prefix="/api/v1") # NEW ROUTER
+
+# ... rest of the file ...
 
 # Initialize FastAPI application
 app = FastAPI(
