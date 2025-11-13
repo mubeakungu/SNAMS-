@@ -1,1 +1,22 @@
+# --- FastAPI Core ---
+fastapi
+uvicorn[standard]
+pydantic
 
+# --- Database & ORM ---
+sqlalchemy
+alembic
+psycopg2-binary # PostgreSQL driver
+
+# --- Security & Auth ---
+python-jose[cryptography] # For JWT
+passlib[bcrypt]          # For password hashing
+
+# --- Configuration & Environment ---
+python-decouple # For reading .env files
+
+# --- Networking Libraries (Phase 2 readiness) ---
+napalm
+netmiko
+jinja2
+pysnmp # For SNMP polling
